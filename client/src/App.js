@@ -21,18 +21,17 @@ function App() {
   }, [])
 
   return (
-    <div className="App">
     <Router >
-    <NavBar>
-      <Routes>
-        <Route path="/" element={<Homepage />}/>
-        <Route path="/profilesetup" element={<ProfileSetup />}/>
-        <Route path="/swipemode" element={<SwipeMode dogProfiles={dogProfiles} />}/>
-        <Route path="/matches" element={<Matches />}/>
-      </Routes>
-    </NavBar>
-    </Router>
+    <div className="App">
+      <NavBar/>
+        <Routes>
+          <Route path="/" element={<Homepage />}/>
+          <Route path="/profilesetup" element={<ProfileSetup />}/>
+          <Route path="/swipemode" element={<SwipeMode dogProfiles={dogProfiles} />}/>
+          <Route path="/matches" element={<Matches />}/>
+        </Routes>
     </div>
+    </Router>
   );
 }
 
