@@ -4,8 +4,7 @@ import {Link} from 'react-router-dom';
 
 function NavBar() {
   return (
-    <div>
-      <Menu className='menu'>
+      <Menu className='menu' inverted>
       <Menu.Item>
         <Link to="/">
           <Icon name="home" size="huge" />
@@ -27,7 +26,6 @@ function NavBar() {
         </Link>
       </Menu.Item>
       </Menu>
-    </div>
   )
 }
 
