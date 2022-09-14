@@ -1,14 +1,116 @@
 # This file should contain all the record creation needed to seed the database with its default values.
 # The data can then be loaded with the bin/rails db:seed command (or created alongside the database with db:setup).
-#
-# Examples:
-#
-#   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
-#   Character.create(name: 'Luke', movie: movies.first)
+
 puts "Deleting ..."
 DogProfile.destroy_all
 
 puts "seeding dogprofile"
+
+d1 = DogProfile.create(
+  username: "mars123", 
+  password:"ilovefood", 
+  name: "Mars", 
+  image_url:"https://user-images.githubusercontent.com/72359686/189720226-377f97df-4c21-4977-b710-a9b62bc2751e.jpg", 
+  bio: "I love my mom Laura, food, long naps and swimming. Toy destroyer. Looking for a good time.", 
+  sex: "male",
+  age: 4, 
+  location: "San Francisco, CA", 
+  breed: "Labrador", 
+  size: "large", 
+  looking_for: "relationship", 
+  has_kids: false, 
+  wants_kids: false)
+  
+d2 = DogProfile.create(
+  username: "olive456", 
+  password:"ihatecats", 
+  name: "Olive", 
+  image_url:"https://user-images.githubusercontent.com/72359686/189722510-06e11231-53fa-41bc-9e18-536b71733c77.jpeg", 
+  bio: "I love my mom Danna, cuddles and hate cats.", 
+  sex: "female"
+  age: 1, 
+  location: "Denver, CO", 
+  breed: "Labrador", 
+  size: "large", 
+  looking_for: "friendship", 
+  has_kids: false, 
+  wants_kids: false)
+  
+d3 = DogProfile.create(
+  username: "jasper333", 
+  password:"iamnervous", 
+  name: "Jasper", 
+  image_url:"https://user-images.githubusercontent.com/72359686/189723640-e9423f9f-262d-4c8a-9f89-3636ec2aa948.jpeg", 
+  bio: "I give a good side eye and I'm always nervous and scared but maybe you won't make me nervous. My dad says I'm a bottom (whatever that means).", 
+  sex: "male",
+  age: 2, 
+  location: "Longmont, CO", 
+  breed: "Cattle mix", 
+  size: "medium", 
+  looking_for: "friendship", 
+  has_kids: false, 
+  wants_kids: false)
+  
+d4 = DogProfile.create(
+  username: "puffdaddy", 
+  password: "goodboy123", 
+  name: "Cocoa Puffs", 
+  image_url: "https://user-images.githubusercontent.com/72359686/189724706-d8595e01-d6a9-4dce-92ac-eca5271f5cc6.jpg", 
+  bio: "Avid football player (I am wide retreiver). I love my mom Mae. Im a good boy.", 
+  sex: "male",
+  age: 3, 
+  location: "San Francisco, CA", 
+  breed: "Labrador", 
+  size: "large", 
+  looking_for: "relationship", 
+  has_kids: false, 
+  wants_kids: false)
+  
+d5 = DogProfile.create(
+  username: "lilguy22", 
+  password: "smallbutmighty", 
+  name: "Dakota", 
+  image_url: "https://user-images.githubusercontent.com/72359686/189725315-d5908705-1691-459b-83fd-000eee9e4100.jpeg", 
+  bio: "I like snuggling and sleeping in Dad Garret's bed. Of mexican descent. Don't let me size deceive you.",
+  sex: "male",
+  age: 3, 
+  location: "Denver, CO", 
+  breed: "Chihuahua", 
+  size: "small", 
+  looking_for: "humpship", 
+  has_kids: false, 
+  wants_kids: true)
+  
+d6 = DogProfile.create(
+  username: "mandypoo", 
+  password: "cuite72", 
+  name: "Mandy", 
+  image_url: "https://user-images.githubusercontent.com/72359686/189756354-1ca88f77-8fb3-407c-905e-866f07fc5b47.jpg", 
+  bio: "I protect my human Nick while he codes in exchange for cuddles and walkies. Sometimes I help him code. Saved a woman from a assault once. #dogswhocode",
+  sex: "female",
+  age: 2, 
+  location: "Denver, CO", 
+  breed: "South Texas Special", 
+  size: "medium", 
+  looking_for: "relationship", 
+  has_kids: false, 
+  wants_kids: false)
+  
+d7 = DogProfile.create(
+  username: "lucky777", 
+  password: "toysrule", 
+  name: "Lucky", 
+  image_url: "https://user-images.githubusercontent.com/72359686/189757416-682d8a82-2b5b-4794-a967-0e6533c760e6.jpg", 
+  bio: "I barf quite frequently hope thats okay. I may be old but I'm a catch (and I like to catch). Swipe right-- today's your Lucky day. #pittiesmatter", 
+  sex: "male",
+  age: 11, 
+  location: "San Luis Obispo, CA", 
+  breed: "pittie mix", 
+  size: "medium", 
+  looking_for: "relationship", 
+  has_kids: false, 
+  wants_kids: false)
+  
 d8 = DogProfile.create(
     username: "OneNightOnly", 
     password: "ilikeass",
@@ -460,3 +562,6 @@ d37 = DogProfile.create(
     wants_kids: false)
 
 puts "✅ Done seeding!"
+
+#dog seed template: 
+#d_num = DogProfile.create(username: "", password: "", name: "", image_url: "", bio: "", age: , location: "", breed: "", size: "", looking_for: "", has_kids: false, wants_kids: false)
