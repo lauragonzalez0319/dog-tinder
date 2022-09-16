@@ -2,21 +2,33 @@ import React from 'react'
 import { useState } from "react";
 import SwipeCard from './SwipeCard';
 
-function SwipeMode({ dogProfiles }) {
+function SwipeMode({ user, swipeDogProfiles, handleLeftSwipe, handleRightSwipe }) {
   
   const [index, setIndex] = useState(0);
 
-  function onLeftSwipe() {
-    if (index < dogProfiles.length - 1) { setIndex(index + 1) }
+  function onLeftSwipe(leftSwipedId) {
+    if (index < swipeDogProfiles.length - 1) { setIndex(index + 1) }
+    let postReqObj = {
+      decision_maker_id: user.id,
+      decision_receiver_id: leftSwipedId,
+      approved: false
+    }
+    handleLeftSwipe(postReqObj)
   }
 
-  function onRightSwipe() {
-    if (index < dogProfiles.length - 1) { setIndex(index + 1) }
+  function onRightSwipe(RightSwipedId) {
+    if (index < swipeDogProfiles.length - 1) { setIndex(index + 1) }
+    let postReqObj = {
+      decision_maker_id: user.id,
+      decision_receiver_id: RightSwipedId,
+      approved: true
+    }
+    handleRightSwipe(postReqObj)
   }
 
   return (
-    <SwipeCard key={dogProfiles[index].id} dogProfile={dogProfiles[index]} 
-    onLeftSwipe={onLeftSwipe} onRightSwipe={onRightSwipe} 
+    <SwipeCard key={swipeDogProfiles[index].id} swipeDogProfile={swipeDogProfiles[index]} 
+    onLeftSwipe={onLeftSwipe} onRightSwipe={onRightSwipe}
     />
   )
 }
