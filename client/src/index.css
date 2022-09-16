@@ -12,15 +12,118 @@ code {
     monospace;
 }
 
-/* .card-container { 
-  background-color: black;
-} */
+#banner-img{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 45%;
+}
+
+.swipe-card-text {
+  font-size: 28px;
+  text-align: center;
+  line-height: 1.6;
+  color: white;
+} 
+
+.match-card-text {
+  font-size: 28px;
+  text-align: center;
+  line-height: 1.6;
+  color: white;
+} 
+
+.card-buttons { 
+  font-size: 20px;
+}
+
+.card-img-container {
+  height: 400px;
+}
+
+.card-img {
+  object-fit: contain;
+  width: 100%;
+  height: 400px;
+}
+
+.form-text {
+  font-size: 20px;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
 
 .card-text {
   font-size: 18px;
   text-align: center;
-} 
+}
 
 .swipe-mode {
   background-color: black;
 }
+
+.homeContainer {
+  margin: auto;
+  padding: 30px;
+  background-color: rgba(255, 255, 255, 0.7);
+}
+
+.staffContainer {
+  text-align: center;
+  font-weight: bold;
+  padding: 10px;
+  margin: auto;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  justify-content: space-around;
+  flex-direction: row;
+  -webkit-flex-direction: row;
+  flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+}
+
+.staffCard {
+  box-shadow: 8 8 8 8 rgba(118, 2, 2, 0.847);
+  transition: 0.3s;
+  border-radius: 5px;
+  width:360px;
+  height: auto;
+  text-align: center;
+  padding: 15px;
+  margin: 10px 0;
+  background-color: rgba(255, 255, 255, 0.63);
+}
+
+.staffPic {
+  width: 300px;
+  height: auto;
+  box-shadow: 8 8 8 8 rgba(118, 2, 2, 0.847);
+}
+
+.aboutTindog {
+  margin: auto;
+  font-size: 20px;
+}
+
+h2, h3 {
+  text-align: center;
+}
+
+.home-header {
+  font-size: 30px;
+}
+

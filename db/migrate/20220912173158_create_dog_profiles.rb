@@ -1,11 +1,11 @@
 class CreateDogProfiles < ActiveRecord::Migration[6.1]
   def change
     create_table :dog_profiles do |t|
-      t.string :username
-      t.string :password
+      t.belongs_to :user, null: false, foreign_key: true
       t.string :name
       t.string :image_url
       t.string :bio
+      t.string :sex
       t.integer :age
       t.string :location
       t.string :breed

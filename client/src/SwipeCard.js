@@ -1,42 +1,60 @@
 import React from 'react';
-import { Card, Icon, Button, Image } from "semantic-ui-react";
+import { Card, Icon, Button, Image, List } from "semantic-ui-react";
+import Background from "./paws.jpg"
 
-function SwipeCard({ dogProfile, onLeftSwipe, onRightSwipe }) {
+function SwipeCard({ swipeDogProfile, onLeftSwipe, onRightSwipe }) {
+  
+  function onLeftSwipeClick() {
+    onLeftSwipe(swipeDogProfile.id)
+  }
+
+  function onRightSwipeClick() {
+    onRightSwipe(swipeDogProfile.id)
+  }
+
+
   return (
     <div className="swipe-mode">
-      <Card fluid className="card-container" color="red">
-        <Image src={dogProfile.image_url} size="huge" centered/>
+      <Card fluid>
+        <div style={{ backgroundImage: "url(" + Background + ")" }}>
+          <Image src={swipeDogProfile.image_url} size="huge" centered />
+        </div>
         <Card.Content>
-          <Card.Header style={{ fontSize: "55px", textAlign: "center" }} centered>{dogProfile.name} , {dogProfile.age}</Card.Header>
-          <Card.Meta style={{ fontSize: "25px", textAlign: "center" }}>
-            <span className='location'>{dogProfile.location}</span>
+          <Card.Header style={{ fontSize: "55px", textAlign: "center" }} centered>{swipeDogProfile.name}, {swipeDogProfile.age}</Card.Header>
+          <Card.Meta style={{ fontSize: "35px", textAlign: "center" }}>
+            <span className='location'>{swipeDogProfile.location}</span>
           </Card.Meta>
-          <Card.Description className="card-text">
-            Bio: {dogProfile.bio}
-          </Card.Description>
-          <Card.Description className="card-text">
-            Breed: {dogProfile.breed}
-          </Card.Description>
-          <Card.Description className="card-text">
-            Size: {dogProfile.size}
-          </Card.Description>
-          <Card.Description className="card-text">
-            Looking For: {dogProfile.looking_for}
-          </Card.Description>
-          <Card.Description className="card-text">
-            Has Kids: {dogProfile.has_kids ? "Yes" : "No"}
-          </Card.Description>
-          <Card.Description className="card-text">
-            Want Kids: {dogProfile.wants_kids ? "Yes" : "No"}
+          <Card.Description className="swipe-card-text">
+            <List>
+              <List.Item>
+              <List.Header>Bio:</List.Header> {swipeDogProfile.bio}
+              </List.Item>
+              <List.Item>
+              <List.Header>Breed:</List.Header> {swipeDogProfile.breed}
+              </List.Item>
+              <List.Item>
+              <List.Header>Size:</List.Header> {swipeDogProfile.size}
+              </List.Item>
+              <List.Item>
+              <List.Header>Looking For:</List.Header> {swipeDogProfile.looking_for}
+              </List.Item>
+              <List.Item>
+              <List.Header>Has Kids:</List.Header> {swipeDogProfile.has_kids ? "Yes" : "No"}
+              </List.Item>
+              <List.Item>
+              <List.Header>Want Kids:</List.Header> {swipeDogProfile.wants_kids ? "Yes" : "No"}
+              </List.Item>
+            </List>
           </Card.Description>
           </Card.Content>
-          <Button.Group>
-          <Button inverted color="red" icon size="huge" labelPosition='left' onClick={onLeftSwipe}>
+          <Button.Group size="massive">
+          <Button className="card-buttons" color="red" icon labelPosition='left' onClick={onLeftSwipeClick}>
             <Icon name='left arrow' />
             Talk to the Paw
           </Button>
-          <Button color= "green" icon size="huge" labelPosition='right' onClick={onRightSwipe}>
-            Lets butt sniff
+          <Button.Or size="massive" />
+          <Button className="card-buttons" color= "green" icon labelPosition='right' onClick={onRightSwipeClick}>
+            Lets Butt Sniff
           <Icon name='right arrow' />
           </Button>
           </Button.Group>
