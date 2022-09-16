@@ -158,6 +158,7 @@ d1 = DogProfile.create(
    has_kids: false,
    wants_kids: false)
  
+
 d9 = DogProfile.create(
    user_id: u9.id,
    name: "Peter",
