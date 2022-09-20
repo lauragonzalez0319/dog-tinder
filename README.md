@@ -1,4 +1,4 @@
-# Project Template: React/Rails API
+# TinDog
 
 ## Description
 
@@ -6,7 +6,8 @@ This project is built with a React frontend and Rails backend. Dog Tinder, named
 
 ## Languages
 
-- Ruby 
-- NodeJS 
+- Ruby on Rails 
+- NodeJS
+- ReactJS
 - Postgresql
 - Semantic
