@@ -6,6 +6,7 @@ This project is built with a React frontend and Rails backend. Dog Tinder, named
 
 ## Languages
 
-- Ruby 2.7.4
-- NodeJS (v16), and npm
+- Ruby 
+- NodeJS 
 - Postgresql
+- Semantic
